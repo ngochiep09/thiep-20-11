@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc Mừng Ngày Nhà Giáo Việt Nam - Cô Trần Nguyễn Thục Trang Anh</title>
+<meta name="description" content="Mừng 20-11, kính tặng người đã để lại dấu ấn trong từng người chúng em">
+<meta name="theme-color" content="#1f5b5c">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Chúc Mừng Ngày Nhà Giáo Việt Nam - Cô Trần Nguyễn Thục Trang Anh">
+<meta property="og:description" content="Mừng 20-11, kính tặng người đã để lại dấu ấn trong từng người chúng em">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600&family=Dancing+Script:wght@600&family=Lora:ital,wght@0,400;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f6f0e1;
+    --cream-2: #efe6d2;
+    --teal: #1f5b5c;
+    --teal-deep: #174647;
+    --coral: #c4614a;
+    --gold: #d9a93a;
+    --blue: #3f7fb5;
+    --green: #7a9a4a;
+    --paper: #faf5ea;
+    --serif: "Playfair Display", "Times New Roman", serif;
+    --body: "Lora", Georgia, serif;
+    --sans: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --script: "Dancing Script", cursive;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    color: var(--teal-deep);
+    background-color: var(--cream);
+    background-image:
+      radial-gradient(rgba(31,91,92,.13) 1px, transparent 1.2px),
+      radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.7), transparent 60%);
+    background-size: 9px 9px, 100% 100%;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body.locked { overflow: hidden; height: 100vh; }
+  svg { display: block; }
+  .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+  /* ============ MÀN 1: CÂY DẤU TAY ============ */
+  #intro {
+    position: fixed; inset: 0; z-index: 20;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 24px 20px;
+    background-color: var(--cream);
+    background-image: radial-gradient(rgba(31,91,92,.13) 1px, transparent 1.2px);
+    background-size: 9px 9px;
+    transition: opacity .9s ease, transform .9s ease, visibility .9s;
+  }
+  #intro.leave { opacity: 0; transform: scale(1.04); visibility: hidden; }
+  .intro-date { font: 600 1rem var(--sans); letter-spacing: .25em; color: var(--coral); display: flex; align-items: center; gap: 10px; }
+  .intro-date svg { width: 18px; height: 22px; color: var(--coral); }
+  .intro-sub { font: 600 .78rem/1.7 var(--sans); letter-spacing: .22em; color: var(--teal); margin-top: 14px; text-transform: uppercase; }
+  .tree { width: min(74vw, 300px); margin: 22px 0 6px; overflow: visible; }
+  .intro-name { font: 700 clamp(1.7rem, 8.4vw, 2.5rem)/1.15 var(--serif); color: var(--teal-deep); }
+  .intro-quote { font: italic 1.02rem/1.6 var(--body); color: #5b6b66; margin: 12px auto 0; max-width: 24ch; }
+  #stampBtn {
+    margin-top: 24px; display: inline-flex; align-items: center; gap: 12px;
+    font: 600 .9rem var(--sans); letter-spacing: .2em; color: #fff;
+    background: linear-gradient(180deg, var(--teal), var(--teal-deep));
+    border: 0; border-radius: 999px; padding: 10px 28px 10px 10px; cursor: pointer;
+    box-shadow: 0 12px 24px rgba(23,70,71,.32);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  #stampBtn:hover { transform: translateY(-2px); }
+  #stampBtn:active { transform: scale(.97); }
+  #stampBtn:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+  #stampBtn .btn-fp { width: 38px; height: 38px; border-radius: 50%; background: #e98a73; display: grid; place-items: center; }
+  #stampBtn .btn-fp svg { width: 20px; height: 24px; color: #fff; }
+  #stampBtn[disabled] { pointer-events: none; opacity: .85; }
+  .intro-hint { font: 500 .78rem var(--sans); color: #7b8883; margin-top: 12px; letter-spacing: .04em; }
+
+  .p-pop { transform-box: fill-box; transform-origin: center; animation: pop .55s cubic-bezier(.2,1.6,.4,1) both; }
+  @keyframes pop { from { transform: scale(2.2); opacity: 0; } to { transform: scale(1); opacity: .95; } }
+  .tree-sway { transform-origin: 150px 320px; animation: sway 6s ease-in-out infinite; }
+  @keyframes sway { 0%,100% { transform: rotate(-.7deg); } 50% { transform: rotate(.7deg); } }
+
+  /* ============ MÀN 2: THIỆP ============ */
+  #main { max-width: 540px; margin: 0 auto; padding: 36px 20px 90px; text-align: center; position: relative; }
+  #main[hidden] { display: none; }
+  .pill {
+    display: inline-block; font: 600 .74rem/1.6 var(--sans); letter-spacing: .2em; text-transform: uppercase;
+    color: var(--teal); background: #fbf6ec; border: 1px solid #d9d2bf; border-radius: 999px;
+    padding: 10px 26px; box-shadow: 0 4px 14px rgba(0,0,0,.06); position: relative;
+  }
+  .pill::before, .pill::after { content: ""; position: absolute; top: 50%; width: 5px; height: 5px; margin-top: -2.5px; border-radius: 50%; background: var(--coral); }
+  .pill::before { left: 12px; } .pill::after { right: 12px; }
+
+  .portrait { position: relative; width: min(76vw, 300px); aspect-ratio: 300/390; margin: 38px auto 0; }
+  .rings { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--teal); animation: spin 90s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .photo {
+    position: absolute; left: 50%; top: 50%; width: 62%; height: 76%; transform: translate(-50%, -50%);
+    border-radius: 50%; overflow: hidden; box-shadow: 0 10px 30px rgba(23,70,71,.35); background: var(--teal);
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+  .badge {
+    position: absolute; right: 12%; bottom: 8%; width: 46px; height: 46px; border-radius: 50%;
+    background: #fbf1e6; border: 2px solid #e8c9bb; display: grid; place-items: center; box-shadow: 0 6px 14px rgba(0,0,0,.15);
+  }
+  .badge svg { width: 22px; height: 26px; color: var(--coral); }
+
+  h1.title { font: 500 clamp(1.7rem, 7.6vw, 2.3rem)/1.2 var(--serif); color: var(--teal-deep); margin-top: 30px; }
+  .date-line { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 14px auto; width: 70%; color: var(--coral); font: 600 1rem var(--sans); letter-spacing: .3em; }
+  .date-line::before, .date-line::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--coral)); }
+  .date-line::after { transform: scaleX(-1); }
+  .teacher { font: 700 clamp(1.9rem, 9.4vw, 2.8rem)/1.15 var(--serif); color: var(--coral); }
+  .lead { font: italic 1.08rem/1.65 var(--body); color: #51635f; margin: 14px auto 0; max-width: 26ch; }
+  .from-row { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px 12px; justify-content: center; align-items: center; font-size: .92rem; }
+  .from-row .k { font: 600 .68rem var(--sans); letter-spacing: .2em; color: #8a8f80; text-transform: uppercase; }
+  .from-row .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--coral); }
+
+  .section-label { display: inline-flex; align-items: center; gap: 12px; font: 600 .78rem var(--sans); letter-spacing: .22em; color: var(--teal); text-transform: uppercase; margin-top: 78px; }
+  .section-label svg { width: 14px; height: 17px; color: var(--coral); }
+
+  .letter {
+    position: relative; margin-top: 22px; text-align: left; background: var(--paper);
+    border: 1px solid #ded6c2; border-radius: 12px; padding: 34px 26px 24px;
+    box-shadow: 0 14px 34px rgba(60,50,20,.10);
+  }
+  .letter .twig { position: absolute; right: -4px; top: -34px; width: 90px; }
+  .letter p { font: 400 1.04rem/1.85 var(--body); color: #26393a; margin-bottom: 16px; }
+  .sign { margin-top: 22px; padding-top: 14px; border-top: 1px dashed #cfc7b2; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; }
+  .sign .k { font: 600 .64rem var(--sans); letter-spacing: .2em; color: #8a8f80; text-transform: uppercase; }
+  .sign .who { font: 600 1.7rem/1.3 var(--script); color: var(--teal); }
+  .sign svg { width: 40px; height: 48px; color: var(--coral); flex: none; }
+  .sign.on svg { animation: stamp .7s cubic-bezier(.2,1.4,.4,1) .5s both; }
+  @keyframes stamp { from { transform: scale(2.4) rotate(-20deg); opacity: 0; } to { transform: none; opacity: .95; } }
+
+  .mark-label { font: 600 .78rem var(--sans); letter-spacing: .22em; color: var(--teal); text-transform: uppercase; margin-top: 78px; }
+  .mark { position: relative; width: min(80vw, 330px); aspect-ratio: 1/1.15; margin: 12px auto 0; display: grid; place-items: center; }
+  .mark svg.big { position: absolute; inset: 0; width: 100%; height: 100%; color: #7aa3a1; opacity: .85; animation: spin 140s linear infinite reverse; }
+  .mark blockquote { position: relative; font: italic 1.25rem/1.6 var(--body); color: var(--teal); max-width: 17ch; }
+  .foot { margin-top: 46px; font: 500 .8rem var(--sans); color: #8a8f80; letter-spacing: .05em; }
+
+
+  /* ===== Thư viện ảnh ===== */
+  .gal-label { margin-top: 86px; }
+  .gallery { position: relative; margin-top: 26px; background: var(--paper); border: 1px solid #ded6c2; border-radius: 10px; padding: 18px 0 18px; box-shadow: 0 14px 34px rgba(60,50,20,.08); }
+  .gallery .twig-a { position: absolute; left: -16px; top: -34px; width: 78px; transform: scaleX(-1); }
+  .gallery .twig-b { position: absolute; right: -14px; bottom: -22px; width: 78px; transform: rotate(180deg) scaleX(-1); }
+  .track-wrap { margin: 0 14px; border-radius: 22px; background: linear-gradient(180deg, #f3ecdc, #efe6d2); box-shadow: inset 0 3px 10px rgba(0,0,0,.06), 0 6px 14px rgba(60,50,20,.08); padding: 14px 0; overflow: hidden; }
+  .track { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 0 14px; -webkit-overflow-scrolling: touch; }
+  .track::-webkit-scrollbar { display: none; }
+  .shot { flex: 0 0 66%; scroll-snap-align: center; background: #fbf1e6; border-radius: 20px; padding: 8px; box-shadow: 0 8px 18px rgba(60,40,20,.16); }
+  .shot img { width: 100%; aspect-ratio: 219/298; object-fit: cover; border-radius: 14px; display: block; }
+  .dots { display: flex; gap: 7px; justify-content: center; margin-top: 14px; }
+  .dots i { width: 7px; height: 7px; border-radius: 50%; background: #cfc7b2; transition: background .3s, transform .3s; }
+  .dots i.on { background: var(--coral); transform: scale(1.35); }
+  .gal-cap { text-align: center; font: 500 .88rem var(--sans); color: #8a8f80; margin-top: 12px; }
+
+  /* ===== Chân trang ===== */
+  #end {
+    position: relative; text-align: center; color: #f3ead7; padding: 70px 20px 100px;
+    background-color: #1a4e4f;
+    background-image: radial-gradient(rgba(255,255,255,.09) 1px, transparent 1.2px), radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.12), transparent 60%);
+    background-size: 9px 9px, 100% 100%;
+  }
+  #end[hidden] { display: none; }
+  .tree2 { width: min(72vw, 290px); margin: 0 auto; overflow: visible; }
+  #end .thanks { font: 400 1.15rem/1.7 var(--body); max-width: 22ch; margin: 28px auto 0; }
+  #end .regards { font: italic 1rem var(--body); color: #d9cfb8; margin-top: 26px; }
+  #end .who2 { font: 600 2rem/1.3 var(--script); margin-top: 4px; }
+  #end .stamp2 { width: 36px; height: 44px; color: #e98a73; margin: 12px auto 0; }
+  #end .hint { margin-top: 36px; font: 500 .78rem var(--sans); color: #a9c1bd; letter-spacing: .05em; }
+
+  /* nút nhạc */
+  #music {
+    position: fixed; right: 18px; bottom: 22px; z-index: 10; width: 54px; height: 54px; border-radius: 50%;
+    border: 0; background: radial-gradient(circle at 35% 30%, #e98a73, var(--coral)); color: #fff; cursor: pointer;
+    display: grid; place-items: center; box-shadow: 0 10px 24px rgba(196,97,74,.45);
+  }
+  #music:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  #music svg { width: 24px; height: 24px; }
+  #music.playing { animation: spin 5s linear infinite; }
+  #music::after { content: ""; position: absolute; width: 30px; height: 3px; border-radius: 2px; background: #fff; transform: rotate(-45deg); box-shadow: 0 0 0 2px var(--coral); opacity: 0; transition: opacity .2s; }
+  #music.off::after { opacity: 1; }
+  #toast { position: fixed; left: 50%; bottom: 92px; transform: translateX(-50%); background: var(--teal-deep); color: #fff; font: 500 .8rem var(--sans); padding: 9px 16px; border-radius: 999px; opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 12; white-space: nowrap; }
+  #toast.show { opacity: 1; }
+
+  /* hiệu ứng hiện dần khi cuộn */
+  .rv { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; transition-delay: var(--d, 0s); }
+  .rv.on { opacity: 1; transform: none; }
+
+  /* chạm vào trang để để lại dấu tay */
+  .tap-print { position: absolute; width: 34px; height: 42px; margin: -21px 0 0 -17px; pointer-events: none; z-index: 5; animation: tapfade 1.6s ease-out forwards; }
+  @keyframes tapfade { 0% { transform: scale(1.8); opacity: 0; } 15% { transform: scale(1); opacity: .9; } 100% { transform: scale(.95); opacity: 0; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .rv { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body class="locked">
+
+<!-- Hình dấu vân tay dùng chung -->
+<svg class="sprite" aria-hidden="true">
+  <defs>
+    <symbol id="fp" viewBox="-50 -60 100 120">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2">
+        <ellipse rx="7" ry="9"/>
+        <ellipse rx="14" ry="18" stroke-dasharray="40 9 22 6"/>
+        <ellipse rx="21" ry="27" stroke-dasharray="60 8 30 10"/>
+        <ellipse rx="28" ry="36" stroke-dasharray="80 10 40 8"/>
+        <ellipse rx="35" ry="45" stroke-dasharray="100 12 55 9"/>
+        <ellipse rx="42" ry="54" stroke-dasharray="120 10 70 14"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ======= MÀN 1 ======= -->
+<section id="intro" aria-label="Mở thiệp">
+  <p class="intro-date"><svg><use href="#fp"/></svg>20 · 11</p>
+  <p class="intro-sub">Thiệp chúc mừng ngày<br>Nhà giáo Việt Nam</p>
+
+  <svg class="tree" viewBox="0 0 300 340" aria-hidden="true">
+    <ellipse cx="150" cy="322" rx="62" ry="6" fill="rgba(23,70,71,.15)"/>
+    <g class="tree-sway">
+      <g fill="none" stroke="#1b4d4f" stroke-linecap="round">
+        <path d="M150 210 C150 180 140 150 118 120" stroke-width="10"/>
+        <path d="M150 210 C152 170 165 140 190 105" stroke-width="10"/>
+        <path d="M140 165 C120 152 95 150 68 134" stroke-width="5"/>
+        <path d="M122 124 C124 100 126 80 128 56" stroke-width="5"/>
+        <path d="M118 120 C100 110 86 96 76 76" stroke-width="4"/>
+        <path d="M165 150 C190 150 215 140 240 116" stroke-width="5"/>
+        <path d="M186 112 C192 96 197 78 202 54" stroke-width="4"/>
+      </g>
+      <path d="M96 320 C118 302 128 252 130 206 L170 206 C172 252 184 302 206 320 Z" fill="#1b4d4f"/>
+      <g id="prints"></g>
+    </g>
+  </svg>
+
+  <h2 class="intro-name">Cô Trần Nguyễn<br>Thục Trang Anh</h2>
+  <p class="intro-quote">Mừng 20-11, kính tặng người đã để lại dấu ấn trong từng người chúng em</p>
+  <button id="stampBtn" type="button">
+    <span class="btn-fp"><svg><use href="#fp"/></svg></span>IN DẤU TAY
+  </button>
+  <p class="intro-hint">Chạm để điểm chỉ lên cây</p>
+</section>
+
+<!-- ======= MÀN 2 ======= -->
+<main id="main" hidden>
+  <span class="pill rv">Thiệp chúc mừng ngày<br>Nhà giáo Việt Nam</span>
+
+  <div class="portrait rv" style="--d:.15s">
+    <svg class="rings" viewBox="0 0 300 390" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3">
+        <ellipse cx="150" cy="195" rx="112" ry="150" stroke-dasharray="120 10 60 8" opacity=".95"/>
+        <ellipse cx="150" cy="195" rx="122" ry="160" stroke-dasharray="90 12 140 9" opacity=".8"/>
+        <ellipse cx="150" cy="195" rx="132" ry="170" stroke-dasharray="150 8 70 12" opacity=".65"/>
+        <ellipse cx="150" cy="195" rx="142" ry="180" stroke-dasharray="70 14 110 10" opacity=".5"/>
+      </g>
+    </svg>
+    <div class="photo"><img src="co-giao.jpg" alt="Cô Trần Nguyễn Thục Trang Anh"></div>
+    <div class="badge"><svg><use href="#fp"/></svg></div>
+  </div>
+
+  <h1 class="title rv" style="--d:.1s">Chúc Mừng Ngày Nhà Giáo Việt Nam</h1>
+  <div class="date-line rv" style="--d:.15s">20 · 11</div>
+  <p class="teacher rv" style="--d:.2s">Cô Trần Nguyễn Thục Trang Anh</p>
+  <p class="lead rv" style="--d:.25s">Mừng 20-11, kính tặng người đã để lại dấu ấn trong từng người chúng em</p>
+  <div class="from-row rv" style="--d:.3s">
+    <span class="k">Kính tặng</span><span>Cô Trần Nguyễn Thục Trang Anh</span>
+    <span class="dot"></span>
+    <span class="k">Từ</span><span>Ngọc Hiệp và Gia Bách</span>
+  </div>
+
+  <div class="section-label rv"><svg><use href="#fp"/></svg>Lời nhắn gửi<svg><use href="#fp"/></svg></div>
+
+  <article class="letter rv">
+    <svg class="twig" viewBox="0 0 90 70" aria-hidden="true">
+      <path d="M2 68 C25 55 45 40 70 14" fill="none" stroke="#1b4d4f" stroke-width="3" stroke-linecap="round"/>
+      <g><use href="#fp" x="58" y="-4" width="22" height="26" style="color:#d9a93a"/>
+         <use href="#fp" x="68" y="14" width="18" height="22" style="color:#c4614a"/>
+         <use href="#fp" x="34" y="22" width="18" height="22" style="color:#7a9a4a"/>
+         <use href="#fp" x="18" y="44" width="16" height="20" style="color:#7b4f9a"/></g>
+    </svg>
+    <p class="rv">"Cảm ơn cô đã luôn ở bên dìu dắt chúng em, từ lúc còn bỡ ngỡ bước vào ngôi trường Chuyên Trần Phú, trải qua chặng đường HSG Thành Phố bằng chuyên đầy khắc nghiệt, cho tới những mục tiêu trước thềm tốt nghiệp THPT và tuyển sinh đại học.</p>
+    <p class="rv" style="--d:.1s">Em còn nhớ mãi những tuần nước rút cuối cùng trước kì thi HSG Thành Phố — khi cô trò mình cùng 'chiến đấu' với những xấp đề dày chữ in chằng chịt, tỉ mỉ bóc tách từng lỗi sai trong bài làm. Có những tối muộn hơn 10 giờ đêm vẫn còn sáng đèn, và chính sự tận tâm, nhiệt huyết kiên nhẫn của cô trước từng phần còn chưa trọn vẹn đã tiếp thêm lửa để chúng em vững vàng vượt qua thử thách, khép lại mùa thi với những trái ngọt xứng đáng.</p>
+    <p class="rv" style="--d:.1s">Mong cô vẫn mãi là ngọn hải đăng ấm áp, mang theo ánh đèn dẫn lối cho chúng em trong những ngày cuối cấp ít ỏi còn lại, bận rộn đấy, nhưng cũng thật nhiều kỷ niệm để thương, để nhớ."</p>
+    <div class="sign rv" id="sign">
+      <div><div class="k">Ký tên và điểm chỉ</div><div class="who">Ngọc Hiệp và Gia Bách</div></div>
+      <svg><use href="#fp"/></svg>
+    </div>
+  </article>
+
+  <p class="mark-label rv">Dấu ấn</p>
+  <div class="mark rv">
+    <svg class="big" viewBox="-50 -60 100 120" aria-hidden="true" preserveAspectRatio="none">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.1">
+        <ellipse rx="26" ry="33" stroke-dasharray="40 6 20 5"/>
+        <ellipse rx="31" ry="39" stroke-dasharray="60 5 25 7"/>
+        <ellipse rx="36" ry="45" stroke-dasharray="50 8 40 6"/>
+        <ellipse rx="41" ry="51" stroke-dasharray="70 6 30 9"/>
+        <ellipse rx="46" ry="57" stroke-dasharray="45 9 55 7"/>
+      </g>
+    </svg>
+    <blockquote>"Cô là ngọn hải đăng vững chãi, soi ánh đèn dẫn lối cho chúng em cập bến ước mơ."</blockquote>
+  </div>
+<div class="section-label gal-label rv"><svg><use href="#fp"/></svg>Những dấu ấn đáng nhớ<svg><use href="#fp"/></svg></div>
+  <section class="gallery rv" aria-label="Những dấu ấn đáng nhớ">
+    <svg class="twig-a" viewBox="0 0 90 70" aria-hidden="true">
+      <path d="M2 68 C25 55 45 40 70 14" fill="none" stroke="#1b4d4f" stroke-width="3" stroke-linecap="round"/>
+      <use href="#fp" x="58" y="-4" width="22" height="26" style="color:#d9a93a"/>
+      <use href="#fp" x="68" y="14" width="18" height="22" style="color:#c4614a"/>
+      <use href="#fp" x="34" y="22" width="18" height="22" style="color:#7a9a4a"/>
+      <use href="#fp" x="18" y="44" width="16" height="20" style="color:#7b4f9a"/>
+    </svg>
+    <div class="track-wrap"><div class="track" id="track">
+      <figure class="shot"><img src="anh-1.jpg" alt="Cả lớp chụp ảnh dưới gốc cây cùng cô" loading="lazy"></figure>
+      <figure class="shot"><img src="anh-2.jpg" alt="Cả lớp trong lễ chào mừng năm học mới 2025 - 2026" loading="lazy"></figure>
+      <figure class="shot"><img src="anh-3.jpg" alt="Cả lớp trong phòng học" loading="lazy"></figure>
+      <figure class="shot"><img src="anh-4.jpg" alt="Cô trong lễ khai giảng, bên biển lớp 11 Anh 1" loading="lazy"></figure>
+      <figure class="shot"><img src="anh-5.jpg" alt="Cô bên bảng nhạc xanh" loading="lazy"></figure>
+    </div></div>
+    <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    <p class="gal-cap">Những khoảnh khắc đáng nhớ bên thầy cô</p>
+    <svg class="twig-b" viewBox="0 0 90 70" aria-hidden="true">
+      <path d="M2 68 C25 55 45 40 70 14" fill="none" stroke="#1b4d4f" stroke-width="3" stroke-linecap="round"/>
+      <use href="#fp" x="58" y="-4" width="22" height="26" style="color:#d9a93a"/>
+      <use href="#fp" x="68" y="14" width="18" height="22" style="color:#c4614a"/>
+      <use href="#fp" x="34" y="22" width="18" height="22" style="color:#7a9a4a"/>
+      <use href="#fp" x="18" y="44" width="16" height="20" style="color:#7b4f9a"/>
+    </svg>
+  </section>
+</main>
+
+<footer id="end" hidden>
+  <svg class="tree2" viewBox="0 0 300 340" aria-hidden="true">
+    <g fill="none" stroke="#f3ead7" stroke-linecap="round">
+      <path d="M150 210 C150 180 140 150 118 120" stroke-width="10"/>
+      <path d="M150 210 C152 170 165 140 190 105" stroke-width="10"/>
+      <path d="M140 165 C120 152 95 150 68 134" stroke-width="5"/>
+      <path d="M122 124 C124 100 126 80 128 56" stroke-width="5"/>
+      <path d="M118 120 C100 110 86 96 76 76" stroke-width="4"/>
+      <path d="M165 150 C190 150 215 140 240 116" stroke-width="5"/>
+      <path d="M186 112 C192 96 197 78 202 54" stroke-width="4"/>
+    </g>
+    <path d="M118 322 C132 304 136 256 138 206 L162 206 C164 256 168 304 182 322 Z" fill="#f3ead7"/>
+    <g id="prints2"></g>
+  </svg>
+  <p class="thanks rv">Thân ái và trân trọng gửi đến người lái đò của chúng em.</p>
+  <p class="regards rv">Trân trọng,</p>
+  <p class="who2 rv">Ngọc Hiệp và Gia Bách</p>
+  <svg class="stamp2 rv" aria-hidden="true"><use href="#fp"/></svg>
+  <p class="hint rv">Chạm vào trang để để lại dấu tay của bạn</p>
+</footer>
+
+<button id="music" class="off" type="button" aria-label="Bật hoặc tắt nhạc" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+</button>
+<div id="toast"></div>
+<audio id="bgm" src="nhac.mp3" loop preload="none"></audio>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  var colors = ["#c4614a", "#3f7fb5", "#7a9a4a", "#d9a93a", "#1f5b5c", "#7b4f9a", "#e07a5f"];
+  var spots = [
+    [60,100],[78,70],[100,95],[125,50],[112,82],[150,28],[150,75],[175,60],[200,50],[195,95],[222,85],
+    [240,115],[225,140],[205,120],[75,135],[95,150],[120,125],[140,105],[170,105],[60,125],[185,140],[245,90]
+  ];
+  var layer = document.getElementById("prints");
+
+  function addPrint(i, animate) {
+    var s = spots[i], g = document.createElementNS(NS, "g");
+    var size = 0.3 + (i % 3) * 0.04, rot = (i * 37) % 60 - 30;
+    g.setAttribute("transform", "translate(" + s[0] + " " + s[1] + ") scale(" + size + ") rotate(" + rot + ")");
+    var u = document.createElementNS(NS, "use");
+    u.setAttribute("href", "#fp");
+    u.setAttribute("x", -50); u.setAttribute("y", -60);
+    u.setAttribute("width", 100); u.setAttribute("height", 120);
+    u.style.color = colors[i % colors.length];
+    u.setAttribute("opacity", ".95");
+    if (animate) u.setAttribute("class", "p-pop");
+    g.appendChild(u); layer.appendChild(g);
+  }
+  // Ban đầu cây đã có sẵn một nửa số dấu tay
+  var later = [];
+  spots.forEach(function (_, i) { if (i % 2 === 0) addPrint(i, false); else later.push(i); });
+
+  var btn = document.getElementById("stampBtn");
+  var intro = document.getElementById("intro");
+  var main = document.getElementById("main");
+  var endEl = document.getElementById("end");
+  var music = document.getElementById("music");
+
+  btn.addEventListener("click", function () {
+    btn.disabled = true;
+    tryPlay(true);
+    later.forEach(function (i, n) { setTimeout(function () { addPrint(i, true); }, n * 130); });
+    setTimeout(openCard, later.length * 130 + 900);
+  });
+
+  function openCard() {
+    intro.classList.add("leave");
+    main.hidden = false; endEl.hidden = false; music.hidden = false;
+    document.body.classList.remove("locked");
+    window.scrollTo(0, 0);
+    watch();
+  }
+
+  // Hiện dần khi cuộn tới
+  function watch() {
+    var items = document.querySelectorAll(".rv");
+    if (!("IntersectionObserver" in window)) { items.forEach(function (e) { e.classList.add("on"); }); return; }
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    items.forEach(function (e) { io.observe(e); });
+  }
+
+  // Chạm vào trang để lại dấu tay
+  document.addEventListener("pointerdown", function (ev) {
+    if (main.hidden || ev.target.closest("#music") || ev.target.closest("#track")) return;
+    var d = document.createElement("div");
+    d.className = "tap-print";
+    d.style.left = ev.pageX + "px"; d.style.top = ev.pageY + "px";
+    d.style.color = colors[Math.floor(Math.random() * colors.length)];
+    d.innerHTML = '<svg width="34" height="42"><use href="#fp"/></svg>';
+    document.body.appendChild(d);
+    setTimeout(function () { d.remove(); }, 1700);
+  });
+
+  // Nhạc nền (tuỳ chọn): đặt file nhac.mp3 cạnh index.html
+  var bgm = document.getElementById("bgm"), toast = document.getElementById("toast"), tt;
+  function say(t) { toast.textContent = t; toast.classList.add("show"); clearTimeout(tt); tt = setTimeout(function () { toast.classList.remove("show"); }, 2200); }
+  function tryPlay(silent) {
+    var p = bgm.play();
+    if (p && p.then) p.then(function () { music.classList.add("playing"); music.classList.remove("off"); })
+      .catch(function () { if (!silent) say("Chưa có file nhac.mp3 trong thư mục"); });
+  }
+  music.addEventListener("click", function () {
+    if (bgm.paused) tryPlay(false); else { bgm.pause(); music.classList.remove("playing"); music.classList.add("off"); }
+  });
+  bgm.addEventListener("error", function () { music.classList.remove("playing"); music.classList.add("off"); });
+
+  // Dấu tay ở phần ký tên đóng xuống khi cuộn tới
+  var sign = document.getElementById("sign");
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { sign.classList.add("on"); o.disconnect(); } }, { threshold: 0.6 }).observe(sign);
+  } else { sign.classList.add("on"); }
+
+  // Cây ở chân trang: dấu tay màu nhạt hiện dần khi cuộn tới
+  var pale = ["#e8907c", "#8fb3d1", "#a9c07a", "#e3c26a", "#8fb5b3", "#a98bc4"];
+  var layer2 = document.getElementById("prints2"), grown = false;
+  function growTree() {
+    if (grown) return; grown = true;
+    spots.forEach(function (sp, i) {
+      setTimeout(function () {
+        var g = document.createElementNS(NS, "g"), size = 0.3 + (i % 3) * 0.04, rot = (i * 37) % 60 - 30;
+        g.setAttribute("transform", "translate(" + sp[0] + " " + sp[1] + ") scale(" + size + ") rotate(" + rot + ")");
+        var u = document.createElementNS(NS, "use");
+        u.setAttribute("href", "#fp"); u.setAttribute("x", -50); u.setAttribute("y", -60);
+        u.setAttribute("width", 100); u.setAttribute("height", 120);
+        u.style.color = pale[i % pale.length]; u.setAttribute("class", "p-pop");
+        g.appendChild(u); layer2.appendChild(g);
+      }, i * 90);
+    });
+  }
+  var tree2 = document.querySelector(".tree2");
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { growTree(); o.disconnect(); } }, { threshold: 0.4 }).observe(tree2);
+  } else { growTree(); }
+
+  // Thư viện ảnh: tự chuyển ảnh, dừng khi người xem chạm vào
+  var track = document.getElementById("track"), dots = document.querySelectorAll("#dots i");
+  var shots = track.children, cur = 0, auto = null;
+  function go(n) {
+    cur = (n + shots.length) % shots.length;
+    var el = shots[cur];
+    track.scrollTo({ left: el.offsetLeft - (track.clientWidth - el.clientWidth) / 2, behavior: "smooth" });
+  }
+  track.addEventListener("scroll", function () {
+    var mid = track.scrollLeft + track.clientWidth / 2, best = 0, bd = 1e9;
+    for (var i = 0; i < shots.length; i++) {
+      var d = Math.abs(shots[i].offsetLeft + shots[i].clientWidth / 2 - mid);
+      if (d < bd) { bd = d; best = i; }
+    }
+    cur = best;
+    dots.forEach(function (d, i) { d.classList.toggle("on", i === best); });
+  }, { passive: true });
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) {
+    auto = setInterval(function () { go(cur + 1); }, 3200);
+    ["pointerdown", "wheel", "touchstart"].forEach(function (ev) {
+      track.addEventListener(ev, function () { clearInterval(auto); }, { passive: true, once: true });
+    });
+  }
+})();
+</script>
+</body>
+</html>
